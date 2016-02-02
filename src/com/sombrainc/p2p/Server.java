@@ -9,7 +9,7 @@ import com.sombrainc.p2p.util.Constant;
 public class Server {
 
 	public static void main(String[] args) throws IOException {
-		try(ServerSocket ss = new ServerSocket(Constant.SERVERPORT)) {
+		try (ServerSocket ss = new ServerSocket(Constant.SERVERPORT)) {
 			while (true) {
 				new Thread(new Controller(ss.accept())).start();
 			}
